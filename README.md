@@ -75,7 +75,7 @@ Você precisa ter o Node.js (que inclui o npm) instalado em sua máquina.
 1. **Clone o repositório** (ou simplesmente descompacte os arquivos em uma pasta):
    ```bash
    # Se estiver usando git
-   git clone https://github.com/seu-usuario/projeto-taskflow.git
+   git clone https://github.com/Lukithas/taskflow.git
    ```
 
 2. **Navegue até a pasta do projeto**:
