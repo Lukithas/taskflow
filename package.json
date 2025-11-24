@@ -1,0 +1,22 @@
+{
+  "name": "projeto-taskflow",
+  "version": "1.0.0",
+  "description": "TaskFlow é uma aplicação web full-stack para gerenciamento de tarefas (To-Do List). Ela permite que os usuários se cadastrem, façam login e gerenciem suas próprias listas de tarefas de forma segura e individual.",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {}
+}

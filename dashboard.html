@@ -1,0 +1,65 @@
+<!-- Define o tipo de documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Define o idioma da página como português do Brasil -->
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres para UTF-8, que suporta a maioria dos caracteres e símbolos -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para garantir que a página seja responsiva e se ajuste bem em diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>TaskFlow - Seu Painel</title>
+    <!-- Importa a fonte Roboto do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Link para a folha de estilos CSS externa -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <div class="container">
+            <!-- Título principal da aplicação -->
+            <h1>TaskFlow</h1>
+            <!-- Seção de informações do usuário -->
+            <div class="user-info">
+                <!-- Saudação ao usuário, o nome será preenchido dinamicamente via JavaScript -->
+                <span>Olá, <span id="user-name">Usuário</span>!</span>
+                <!-- Botão para o usuário fazer logout -->
+                <button id="btn-logout">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="container">
+        <!-- Seção para adicionar uma nova tarefa -->
+        <section class="nova-tarefa-container">
+            <h2>Nova Tarefa</h2>
+            <!-- Formulário para submissão de uma nova tarefa -->
+            <form id="form-nova-tarefa">
+                <!-- Campo de texto para inserir a descrição da nova tarefa -->
+                <input type="text" id="input-nova-tarefa" placeholder="O que precisa ser feito?" required>
+                <!-- Botão para submeter o formulário e adicionar a tarefa -->
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <!-- Seção para exibir a lista de tarefas do usuário -->
+        <section class="tarefas-container">
+            <h2>Suas Tarefas</h2>
+            <!-- Lista não ordenada onde as tarefas serão inseridas dinamicamente via JavaScript -->
+            <ul id="lista-de-tarefas">
+                <!-- As tarefas (<li>) serão adicionadas aqui pelo JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Link para o arquivo JavaScript que controla a interatividade da página -->
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

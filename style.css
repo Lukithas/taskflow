@@ -1,0 +1,293 @@
+/* --- RESET BÁSICO E CONFIGURAÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    /* Cinza claro padrão do Material Design */
+    color: #202124;
+    /* Preto suave do Google */
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* --- CONTÊINER PRINCIPAL (Login/Cadastro e Dashboard) --- */
+.container,
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    /* Limita a largura em telas grandes */
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* --- ESTILOS PARA A PÁGINA DE LOGIN/CADASTRO (index.html) --- */
+.form-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    /* Bordas menos arredondadas */
+    border: 1px solid #dadce0;
+    /* Borda sutil, comum em formulários Google */
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #202124;
+}
+
+.form-container p {
+    margin-bottom: 2rem;
+    color: #5f6368;
+    /* Cinza secundário do Google */
+}
+
+form label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #5f6368;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    /* Azul Google */
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+    /* Anel de foco mais sutil */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1865c9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:disabled {
+    background-color: #a0c3fa;
+    cursor: not-allowed;
+}
+
+.toggle-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.toggle-link a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.toggle-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de erro/sucesso */
+.mensagem {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    /* Começa escondido */
+}
+
+.mensagem-sucesso {
+    background-color: #e0f8e9;
+    color: #1d7c3f;
+}
+
+.mensagem-erro {
+    background-color: #fde2e2;
+    color: #b91c1c;
+}
+
+/* --- ESTILOS PARA O DASHBOARD (dashboard.html) --- */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra padrão Material */
+    margin-bottom: 2rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    /* Maior largura para o conteúdo do dashboard */
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#btn-logout {
+    background: none;
+    border: 1px solid #dadce0;
+    color: #1a73e8;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-logout:hover {
+    background-color: rgba(26, 115, 232, 0.05);
+}
+
+main.container {
+    max-width: 800px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(60, 64, 67, 0.1);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e8eaed;
+    padding-bottom: 0.5rem;
+}
+
+/* Formulário de nova tarefa */
+#form-nova-tarefa {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#form-nova-tarefa input {
+    flex-grow: 1;
+    /* Input ocupa o espaço disponível */
+}
+
+#form-nova-tarefa button {
+    flex-shrink: 0;
+    /* Impede que o botão encolha */
+}
+
+#form-nova-tarefa button {
+    flex-shrink: 0;
+    /* Impede que o botão encolha */
+}
+
+/* Lista de tarefas */
+#lista-de-tarefas {
+    list-style: none;
+}
+
+#lista-de-tarefas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 0.5rem;
+    border-bottom: 1px solid #e8eaed;
+    transition: background-color 0.2s;
+}
+
+#lista-de-tarefas li:last-child {
+    border-bottom: none;
+}
+
+#lista-de-tarefas li:hover {
+    background-color: #f8f9fa;
+}
+
+.tarefa-concluida span {
+    text-decoration: line-through;
+    color: #5f6368;
+}
+
+.botoes-tarefa {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.botoes-tarefa button {
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    transition: background-color 0.2s;
+}
+
+.btn-concluir {
+    color: #1e8e3e;
+    /* Verde Google */
+}
+
+.btn-concluir:hover {
+    background-color: rgba(30, 142, 62, 0.1);
+}
+
+.tarefa-concluida .btn-concluir {
+    color: #f9ab00;
+    /* Amarelo/Laranja Google */
+}
+
+.tarefa-concluida .btn-concluir:hover {
+    background-color: rgba(249, 171, 0, 0.1);
+}
+
+.btn-excluir {
+    color: #d93025;
+    /* Vermelho Google */
+}
+
+.btn-excluir:hover {
+    background-color: rgba(217, 48, 37, 0.1);
+}

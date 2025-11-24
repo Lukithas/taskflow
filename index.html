@@ -1,0 +1,77 @@
+<!-- Define o tipo de documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Define o idioma da página como português do Brasil, importante para acessibilidade e SEO -->
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres para UTF-8, que suporta a maioria dos caracteres e símbolos -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para garantir que a página seja responsiva e se ajuste bem em diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>TaskFlow - Login</title>
+    <!-- Importa a fonte Roboto do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Link para a folha de estilos CSS externa que define a aparência da página -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Contêiner principal que envolve toda a aplicação de login/cadastro -->
+    <div class="app-container">
+
+        <!-- Contêiner para o formulário de Login. Este é o formulário visível por padrão. -->
+        <div class="form-container" id="login-container">
+            <h1>TaskFlow</h1>
+            <p>Acesse sua conta</p>
+            <!-- Formulário de login, cujo envio será controlado pelo auth.js -->
+            <form id="form-login">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="seu@email.com" required>
+
+                <label for="login-senha">Senha</label>
+                <input type="password" id="login-senha" placeholder="Sua senha" required>
+
+                <!-- Div vazia que será usada para exibir mensagens de erro ou sucesso no login -->
+                <div id="msg-login" class="mensagem"></div>
+
+                <!-- Botão para submeter o formulário de login -->
+                <button type="submit" id="btn-login">Entrar</button>
+            </form>
+            <!-- Link para alternar para a tela de cadastro -->
+            <p class="toggle-link">Não tem conta? <a href="#" id="link-cadastro">Cadastre-se</a></p>
+        </div>
+
+        <!-- Contêiner para o formulário de Cadastro. Ele começa escondido (display: none) -->
+        <div class="form-container" id="cadastro-container" style="display: none;">
+            <h1>TaskFlow</h1>
+            <p>Crie sua conta</p>
+            <!-- Formulário de cadastro, controlado pelo auth.js -->
+            <form id="form-cadastro">
+                <label for="cadastro-nome">Nome</label>
+                <input type="text" id="cadastro-nome" placeholder="Seu nome" required>
+
+                <label for="cadastro-email">Email</label>
+                <input type="email" id="cadastro-email" placeholder="seu@email.com" required>
+
+                <label for="cadastro-senha">Senha</label>
+                <input type="password" id="cadastro-senha" placeholder="Crie uma senha" required>
+
+                <!-- Div vazia para exibir mensagens de erro ou sucesso no cadastro -->
+                <div id="msg-cadastro" class="mensagem"></div>
+
+                <!-- Botão para submeter o formulário de cadastro -->
+                <button type="submit" id="btn-cadastro">Criar Conta</button>
+            </form>
+            <!-- Link para alternar de volta para a tela de login -->
+            <p class="toggle-link">Já tem conta? <a href="#" id="link-login">Faça login</a></p>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript que contém toda a lógica de autenticação e troca de formulários -->
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
