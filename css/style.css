@@ -240,3 +240,19 @@ main h2 {
 .btn-excluir:hover {
     background-color: #a71d2a;
 }
+
+/* ... (seu código antigo termina aqui) */
+
+/* RODAPÉ (FOOTER) */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #888; /* Cinza claro para não chamar muita atenção */
+    font-size: 0.85em;
+    margin-top: auto; /* Empurra para baixo se usar Flexbox */
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
